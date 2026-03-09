@@ -2,32 +2,35 @@
 <html>
 <head>
 <title>Student Profile</title>
+<script src="script.js"></script>
 </head>
 
 <body>
 
-<h2>Create Your Profile</h2>
+<h1>Create Your Profile</h1>
 
 <form>
 
-Name:<br>
-<input type="text"><br><br>
+<label>Name:</label><br>
+<input type="text" id="name"><br><br>
 
-Education Level:<br>
-<input type="text"><br><br>
+<label>Email:</label><br>
+<input type="email" id="email"><br><br>
 
-Skills:<br>
-<input type="text"><br><br>
+<label>Interest:</label><br>
+<input type="text" id="interest"><br><br>
 
-Interests:<br>
-<input type="text"><br><br>
-
-Career Goal:<br>
-<input type="text"><br><br>
-
-<button type="submit">Save Profile</button>
+<button type="button" onclick="saveProfile()">Save Profile</button>
 
 </form>
+
+<h2>Saved Profile</h2>
+
+<p id="displayName"></p>
+<p id="displayEmail"></p>
+<p id="displayInterest"></p>
+
+<button onclick="showProfile()">View Saved Profile</button>
 
 </body>
 </html>
