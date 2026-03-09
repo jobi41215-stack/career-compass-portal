@@ -9,16 +9,31 @@
 
 <h1>Career Assessment Quiz</h1>
 
-<p>1. Do you enjoy solving logical problems?</p>
+<form id="quizForm">
 
-<button onclick="developer()">Yes</button>
-<button onclick="teacher()">No</button>
+<p>1. Do you enjoy solving logical problems?</p>
+<input type="radio" name="q1" value="tech"> Yes<br>
+<input type="radio" name="q1" value="nontech"> No<br>
 
 <p>2. Do you like designing or drawing?</p>
+<input type="radio" name="q2" value="design"> Yes<br>
+<input type="radio" name="q2" value="tech"> No<br>
 
-<button onclick="designer()">Yes</button>
-<button onclick="analyst()">No</button>
+<p>3. Do you enjoy working with data and numbers?</p>
+<input type="radio" name="q3" value="data"> Yes<br>
+<input type="radio" name="q3" value="nontech"> No<br>
 
+<p>4. Do you enjoy teaching or helping others learn?</p>
+<input type="radio" name="q4" value="teaching"> Yes<br>
+<input type="radio" name="q4" value="tech"> No<br>
+
+<br>
+
+<button type="button" onclick="calculateResult()">Submit Quiz</button>
+
+</form>
+
+<h2 id="result"></h2>
 
 </body>
 </html>
