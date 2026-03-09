@@ -1,15 +1,50 @@
-function developer(){
-alert("Suggested Career: Software Developer");
+function calculateResult(){
+
+let tech = 0;
+let design = 0;
+let data = 0;
+let teaching = 0;
+
+let answers = document.querySelectorAll("input[type=radio]:checked");
+
+answers.forEach((answer) => {
+
+if(answer.value === "tech"){
+tech++;
 }
 
-function teacher(){
-alert("Suggested Career: Teacher");
+if(answer.value === "design"){
+design++;
 }
 
-function designer(){
-alert("Suggested Career: Graphic Designer");
+if(answer.value === "data"){
+data++;
 }
 
-function analyst(){
-alert("Suggested Career: Data Analyst");
+if(answer.value === "teaching"){
+teaching++;
+}
+
+});
+
+let result = "";
+
+if(tech >= design && tech >= data && tech >= teaching){
+result = "Suggested Career: Software Developer";
+}
+
+else if(design >= tech && design >= data && design >= teaching){
+result = "Suggested Career: UI/UX Designer";
+}
+
+else if(data >= tech && data >= design && data >= teaching){
+result = "Suggested Career: Data Analyst";
+}
+
+else{
+result = "Suggested Career: Teacher";
+}
+
+document.getElementById("result").innerText = result;
+
 }
