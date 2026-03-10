@@ -1,62 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Student Dashboard</title>
+<title>Career Compass Dashboard</title>
 <link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
 </head>
 
 <body>
 
+<div class="container">
+
+<!-- Sidebar -->
+<div class="sidebar">
+
+<h2>Career Compass</h2>
+
+<a href="index.html">🏠 Home</a>
+<a href="profile.html">👤 Profile</a>
+<a href="quiz.html">📝 Career Quiz</a>
+<a href="#">📚 Courses</a>
+<a href="#">💼 Internships</a>
+<a href="#">📊 Dashboard</a>
+
+</div>
+
+<!-- Main Section -->
+<div class="main">
+
+<!-- Top header -->
+<div class="header">
 <h1>Student Dashboard</h1>
+</div>
 
-<div class="dashboard">
-
+<!-- Profile card -->
 <div class="card">
-<h3>Name</h3>
-<p id="studentName"></p>
+
+<h2>Your Profile</h2>
+
+<p><strong>Name:</strong> <span id="studentName"></span></p>
+<p><strong>Interest:</strong> <span id="studentInterest"></span></p>
+<p><strong>Recommended Career:</strong> <span id="careerResult"></span></p>
+
 </div>
 
+<!-- Career cards -->
+<div class="careerSection">
+
+<h2>Popular Careers</h2>
+
+<div class="careerCards">
+
+<div class="careerCard">
+<h3>Software Developer</h3>
+<p>Build websites, apps, and software systems.</p>
+</div>
+
+<div class="careerCard">
+<h3>Data Analyst</h3>
+<p>Analyze data to help companies make decisions.</p>
+</div>
+
+<div class="careerCard">
+<h3>UI/UX Designer</h3>
+<p>Design beautiful and user-friendly apps.</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- Progress tracker -->
 <div class="card">
-<h3>Interest</h3>
-<p id="studentInterest"></p>
-</div>
 
-<div class="card">
-<h3>Recommended Career</h3>
-<p id="careerResult"></p>
-</div>
-
-</div>
-
-<h2>Quick Actions</h2>
-
-<div class="dashboard">
-
-<div class="card">
-<a href="quiz.html">Take Career Quiz</a>
-</div>
-
-<div class="card">
-<a href="courses.html">View Courses</a>
-</div>
-
-<div class="card">
-<a href="internships.html">Find Internships</a>
-</div>
-
-</div>
 <h2>Career Progress</h2>
 
 <label>Programming Basics</label>
-<progress value="30" max="100"></progress><br><br>
+<progress value="40" max="100"></progress>
 
 <label>Projects</label>
-<progress value="20" max="100"></progress><br><br>
+<progress value="20" max="100"></progress>
 
 <label>Internship</label>
-<progress value="10" max="100"></progress><br><br>
+<progress value="10" max="100"></progress>
 
-<script src="script.js"></script>
+</div>
+
+<!-- Quick actions -->
+<div class="card">
+
+<h2>Quick Actions</h2>
+
+<button onclick="window.location.href='quiz.html'">Take Career Quiz</button>
+
+<button onclick="window.location.href='profile.html'">Update Profile</button>
+
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
