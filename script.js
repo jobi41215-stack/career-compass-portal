@@ -148,7 +148,31 @@ document.getElementById("result").innerText =
 localStorage.setItem("careerRecommendation", career);
 
 }
+function careerChatbot(){
 
+let question = document.getElementById("userQuestion").value.toLowerCase();
+
+let response = "";
+
+if(question.includes("software")){
+response = "To become a Software Developer, learn programming like JavaScript, Python, and build projects.";
+}
+
+else if(question.includes("data")){
+response = "For Data Analyst careers, learn Excel, SQL, Python, and statistics.";
+}
+
+else if(question.includes("design")){
+response = "For UI/UX design, learn Figma, Adobe XD, and design principles.";
+}
+
+else{
+response = "Explore careers like Software Developer, Data Analyst, UI/UX Designer, or Teacher.";
+}
+
+document.getElementById("chatbotResponse").innerText = response;
+
+}
 
 
 window.onload = function(){
