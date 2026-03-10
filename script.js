@@ -83,6 +83,11 @@ let interest = localStorage.getItem("studentInterest");
 document.getElementById("displayName").innerText = "Name: " + name;
 document.getElementById("displayEmail").innerText = "Email: " + email;
 document.getElementById("displayInterest").innerText = "Interest: " + interest;
+let photo = localStorage.getItem("studentPhoto");
+
+if(photo){
+document.getElementById("displayPhoto").src = photo;
+}
 
 }
 
