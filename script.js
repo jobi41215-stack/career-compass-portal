@@ -173,6 +173,29 @@ response = "Explore careers like Software Developer, Data Analyst, UI/UX Designe
 document.getElementById("chatbotResponse").innerText = response;
 
 }
+function analyzeSkills(){
+
+let programming = document.getElementById("programming").value;
+let creativity = document.getElementById("creativity").value;
+let communication = document.getElementById("communication").value;
+
+let result = "";
+
+if(programming >= creativity && programming >= communication){
+result = "Best Career Path: Software Developer";
+}
+
+else if(creativity >= programming){
+result = "Best Career Path: UI/UX Designer";
+}
+
+else{
+result = "Best Career Path: Teacher or Mentor";
+}
+
+document.getElementById("skillResult").innerText = result;
+
+}
 
 
 window.onload = function(){
