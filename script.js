@@ -196,6 +196,25 @@ result = "Best Career Path: Teacher or Mentor";
 document.getElementById("skillResult").innerText = result;
 
 }
+function predictCareer(type){
+
+let result = "";
+
+if(type === "logic"){
+result = "Recommended Career: Software Developer";
+}
+
+else if(type === "creative"){
+result = "Recommended Career: UI/UX Designer";
+}
+
+else if(type === "help"){
+result = "Recommended Career: Teacher or Counselor";
+}
+
+document.getElementById("personalityResult").innerText = result;
+
+}
 
 
 window.onload = function(){
