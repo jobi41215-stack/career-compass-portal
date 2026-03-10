@@ -1,25 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Personality Career Test</title>
+<title>Personality Test</title>
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
 </head>
 
 <body>
 
-<h1>Personality Career Test</h1>
+<h1>Personality Test</h1>
 
-<p>Do you enjoy solving logical problems?</p>
-<button onclick="predictCareer('logic')">Yes</button>
+<p>1️⃣ Do you enjoy solving logical problems?</p>
 
-<p>Do you like creative activities?</p>
-<button onclick="predictCareer('creative')">Yes</button>
+<input type="radio" name="q1" value="tech"> Yes
+<input type="radio" name="q1" value="design"> No
 
-<p>Do you enjoy helping people?</p>
-<button onclick="predictCareer('help')">Yes</button>
 
-<p id="personalityResult"></p>
+<br><br>
+
+<p>2️⃣ Do you like designing or drawing?</p>
+
+<input type="radio" name="q2" value="design"> Yes
+<input type="radio" name="q2" value="tech"> No
+
+
+<br><br>
+
+<p>3️⃣ Do you enjoy analyzing numbers or data?</p>
+
+<input type="radio" name="q3" value="data"> Yes
+<input type="radio" name="q3" value="design"> No
+
+
+<br><br>
+
+<p>4️⃣ Do you like helping or teaching people?</p>
+
+<input type="radio" name="q4" value="teaching"> Yes
+<input type="radio" name="q4" value="tech"> No
+
+
+<br><br>
+
+<button onclick="calculateResult()">Submit Test</button>
+
+<h2 id="result"></h2>
 
 </body>
 </html>
