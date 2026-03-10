@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+</head>
+
+<body>
+<div id="adminLogin">
+
+<h2>Admin Login</h2>
+
+<input type="text" id="adminUser" placeholder="Enter Admin Username"><br><br>
+
+<input type="password" id="adminPass" placeholder="Enter Password"><br><br>
+
+<button onclick="adminLogin()">Login</button>
+
+</div>
+
+
+<div id="adminPanel" style="display:none;">
+
+<h1>Admin Dashboard</h1>
+
+<h2>Add Course</h2>
+<input type="text" id="courseInput" placeholder="Enter course name">
+<button onclick="addCourse()">Add Course</button>
+<ul id="courseList"></ul>
+
+
+<h2>Add Internship</h2>
+<input type="text" id="internshipInput" placeholder="Enter internship">
+<button onclick="addInternship()">Add Internship</button>
+<ul id="internshipList"></ul>
+
+
+<h2>Add Career Roadmap</h2>
+<input type="text" id="roadmapInput" placeholder="Enter roadmap step">
+<button onclick="addRoadmap()">Add Roadmap</button>
+<ul id="roadmapList"></ul>
+
+</div>
+
+<h1>Admin Dashboard</h1>
+
+<section>
+
+<h2>Add Course</h2>
+
+<input type="text" id="courseInput" placeholder="Enter course name">
+<button onclick="addCourse()">Add Course</button>
+
+<ul id="courseList"></ul>
+
+</section>
+
+<section>
+
+<h2>Add Internship</h2>
+
+<input type="text" id="internshipInput" placeholder="Enter internship title">
+<button onclick="addInternship()">Add Internship</button>
+
+<ul id="internshipList"></ul>
+
+</section>
+
+<section>
+
+<h2>Add Career Roadmap Step</h2>
+
+<input type="text" id="roadmapInput" placeholder="Enter roadmap step">
+<button onclick="addRoadmap()">Add Roadmap Step</button>
+
+<ul id="roadmapList"></ul>
+
+</section>
+
+</body>
+</html>
