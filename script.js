@@ -269,6 +269,46 @@ document.getElementById("result").innerHTML =
 "👨‍🏫 Teacher Match: " + teachingScore + "%";
 
 }
+function signup(){
+
+let name = document.getElementById("signupName").value;
+let email = document.getElementById("signupEmail").value;
+let password = document.getElementById("signupPassword").value;
+
+localStorage.setItem("userName", name);
+localStorage.setItem("userEmail", email);
+localStorage.setItem("userPassword", password);
+
+alert("Signup successful!");
+
+window.location.href = "login.html";
+
+}
+
+
+function login(){
+
+let email = document.getElementById("loginEmail").value;
+let password = document.getElementById("loginPassword").value;
+
+let savedEmail = localStorage.getItem("userEmail");
+let savedPassword = localStorage.getItem("userPassword");
+
+if(email === savedEmail && password === savedPassword){
+
+alert("Login successful!");
+
+window.location.href = "dashboard.html";
+
+}
+
+else{
+
+alert("Invalid login details");
+
+}
+
+}
 
 
 window.onload = function(){
