@@ -53,7 +53,17 @@ function saveProfile(){
 let name = document.getElementById("name").value;
 let email = document.getElementById("email").value;
 let interest = document.getElementById("interest").value;
+let photo = document.getElementById("photo").files[0];
 
+if(photo){
+let reader = new FileReader();
+
+reader.onload = function(){
+localStorage.setItem("studentPhoto", reader.result);
+}
+
+reader.readAsDataURL(photo);
+}
 localStorage.setItem("studentName", name);
 localStorage.setItem("studentEmail", email);
 localStorage.setItem("studentInterest", interest);
