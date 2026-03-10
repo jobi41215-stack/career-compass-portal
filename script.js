@@ -32,18 +32,22 @@ let result = "";
 if(tech >= design && tech >= data && tech >= teaching){
 result = "Suggested Career: Software Developer";
 }
-
 else if(design >= tech && design >= data && design >= teaching){
 result = "Suggested Career: UI/UX Designer";
 }
-
 else if(data >= tech && data >= design && data >= teaching){
 result = "Suggested Career: Data Analyst";
 }
-
 else{
 result = "Suggested Career: Teacher";
 }
+
+document.getElementById("result").innerText = result;
+
+}
+
+
+
 function saveProfile(){
 
 let name = document.getElementById("name").value;
@@ -58,6 +62,8 @@ alert("Profile saved successfully!");
 
 }
 
+
+
 function showProfile(){
 
 let name = localStorage.getItem("studentName");
@@ -70,9 +76,8 @@ document.getElementById("displayInterest").innerText = "Interest: " + interest;
 
 }
 
-document.getElementById("result").innerText = result;
 
-}
+
 function personalizedRecommendation(){
 
 let interest = localStorage.getItem("studentInterest");
@@ -128,6 +133,9 @@ document.getElementById("result").innerText =
 localStorage.setItem("careerRecommendation", career);
 
 }
+
+
+
 window.onload = function(){
 
 let name = localStorage.getItem("studentName");
