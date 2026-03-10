@@ -151,6 +151,7 @@ localStorage.setItem("careerRecommendation", career);
 function careerChatbot(){
 
 let question = document.getElementById("userQuestion").value.toLowerCase();
+let chatbox = document.getElementById("chatbox");
 
 let response = "";
 
@@ -163,14 +164,24 @@ response = "For Data Analyst careers, learn Excel, SQL, Python, and statistics."
 }
 
 else if(question.includes("design")){
-response = "For UI/UX design, learn Figma, Adobe XD, and design principles.";
+response = "For UI/UX Design, learn tools like Figma and Adobe XD.";
+}
+
+else if(question.includes("teacher")){
+response = "Teachers usually need a degree in education and strong communication skills.";
 }
 
 else{
-response = "Explore careers like Software Developer, Data Analyst, UI/UX Designer, or Teacher.";
+response = "You can explore careers like Software Developer, Data Analyst, UI Designer, or Teacher.";
 }
 
-document.getElementById("chatbotResponse").innerText = response;
+chatbox.innerHTML += "<div class='user-message'>" + question + "</div>";
+
+chatbox.innerHTML += "<div class='bot-message'>" + response + "</div>";
+
+document.getElementById("userQuestion").value="";
+
+chatbox.scrollTop = chatbox.scrollHeight;
 
 }
 function analyzeSkills(){
