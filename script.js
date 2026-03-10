@@ -73,3 +73,56 @@ document.getElementById("displayInterest").innerText = "Interest: " + interest;
 document.getElementById("result").innerText = result;
 
 }
+function personalizedRecommendation(){
+
+let interest = localStorage.getItem("studentInterest");
+
+let answers = document.querySelectorAll("input[type=radio]:checked");
+
+let tech = 0;
+let design = 0;
+let data = 0;
+let teaching = 0;
+
+answers.forEach((answer) => {
+
+if(answer.value === "tech"){
+tech++;
+}
+
+if(answer.value === "design"){
+design++;
+}
+
+if(answer.value === "data"){
+data++;
+}
+
+if(answer.value === "teaching"){
+teaching++;
+}
+
+});
+
+let career = "";
+
+if(interest && interest.toLowerCase().includes("coding")){
+career = "Software Developer";
+}
+else if(interest && interest.toLowerCase().includes("design")){
+career = "UI/UX Designer";
+}
+else if(data >= tech && data >= design){
+career = "Data Analyst";
+}
+else if(teaching > tech){
+career = "Teacher";
+}
+else{
+career = "Software Developer";
+}
+
+document.getElementById("result").innerText =
+"Personalized Career Recommendation: " + career;
+
+}
