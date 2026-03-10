@@ -334,7 +334,7 @@ function adminLogin(){
 let username = document.getElementById("adminUser").value;
 let password = document.getElementById("adminPass").value;
 
-if(username === "admin" && password === "1234"){
+if(username === "Raksha" && password === "1232006"){
 
 document.getElementById("adminLogin").style.display = "none";
 
