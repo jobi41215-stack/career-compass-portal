@@ -310,7 +310,6 @@ alert("Invalid login details");
 
 }
 
-
 window.onload = function(){
 
 let name = localStorage.getItem("studentName");
@@ -328,5 +327,143 @@ document.getElementById("studentInterest").innerText = interest;
 if(document.getElementById("careerResult")){
 document.getElementById("careerResult").innerText = career;
 }
+
+}
+function adminLogin(){
+
+let username = document.getElementById("adminUser").value;
+let password = document.getElementById("adminPass").value;
+
+if(username === "admin" && password === "1234"){
+
+document.getElementById("adminLogin").style.display = "none";
+
+document.getElementById("adminPanel").style.display = "block";
+
+}
+else{
+
+alert("Invalid admin credentials");
+
+}
+
+}
+function addCourse(){
+
+let course = document.getElementById("courseInput").value;
+
+let courses = JSON.parse(localStorage.getItem("courses")) || [];
+
+courses.push(course);
+
+localStorage.setItem("courses", JSON.stringify(courses));
+
+displayCourses();
+
+}
+
+function displayCourses(){
+
+let courses = JSON.parse(localStorage.getItem("courses")) || [];
+
+let list = document.getElementById("courseList");
+
+if(!list) return;
+
+list.innerHTML = "";
+
+courses.forEach((course) => {
+
+let li = document.createElement("li");
+
+li.innerText = course;
+
+list.appendChild(li);
+
+});
+
+}
+
+
+function addInternship(){
+
+let internship = document.getElementById("internshipInput").value;
+
+let internships = JSON.parse(localStorage.getItem("internships")) || [];
+
+internships.push(internship);
+
+localStorage.setItem("internships", JSON.stringify(internships));
+
+displayInternships();
+
+}
+
+function displayInternships(){
+
+let internships = JSON.parse(localStorage.getItem("internships")) || [];
+
+let list = document.getElementById("internshipList");
+
+if(!list) return;
+
+list.innerHTML = "";
+
+internships.forEach((internship) => {
+
+let li = document.createElement("li");
+
+li.innerText = internship;
+
+list.appendChild(li);
+
+});
+
+}
+
+
+function addRoadmap(){
+
+let step = document.getElementById("roadmapInput").value;
+
+let roadmap = JSON.parse(localStorage.getItem("roadmap")) || [];
+
+roadmap.push(step);
+
+localStorage.setItem("roadmap", JSON.stringify(roadmap));
+
+displayRoadmap();
+
+}
+
+function displayRoadmap(){
+
+let roadmap = JSON.parse(localStorage.getItem("roadmap")) || [];
+
+let list = document.getElementById("roadmapList");
+
+if(!list) return;
+
+list.innerHTML = "";
+
+roadmap.forEach((step) => {
+
+let li = document.createElement("li");
+
+li.innerText = step;
+
+list.appendChild(li);
+
+});
+
+}
+
+window.onload = function(){
+
+displayCourses();
+
+displayInternships();
+
+displayRoadmap();
 
 }
