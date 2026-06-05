@@ -20,6 +20,31 @@ font-weight:bold;
 h1{
 color:#003366;
 }
+.hero{
+background-image:
+linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+url("hero-banner.png");
+
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+padding:120px 20px;
+
+text-align:center;
+color:white;
+}
+
+.hero h1{
+color:white;
+font-size:50px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
 
 button{
 padding:12px 20px;
