@@ -113,6 +113,31 @@ width:100%;
 padding:12px;
 margin-top:15px;
 }
+.admin-card{
+background:white;
+width:80%;
+max-width:600px;
+margin:20px auto;
+padding:20px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.admin-card input{
+width:80%;
+padding:10px;
+margin:10px;
+}
+
+.admin-card button{
+padding:10px 20px;
+}
+
+.admin-card ul{
+list-style:none;
+padding:0;
+}
 
 footer{
 background:#0f172a;
