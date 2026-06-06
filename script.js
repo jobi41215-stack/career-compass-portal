@@ -457,6 +457,53 @@ list.appendChild(li);
 });
 
 }
+function addQuizQuestion(){
+
+let question = document.getElementById("quizInput").value;
+
+if(question === ""){
+alert("Please enter a question");
+return;
+}
+
+let questions =
+JSON.parse(localStorage.getItem("quizQuestions")) || [];
+
+questions.push(question);
+
+localStorage.setItem(
+"quizQuestions",
+JSON.stringify(questions)
+);
+
+document.getElementById("quizInput").value = "";
+
+displayQuizQuestions();
+
+}
+
+function displayQuizQuestions(){
+
+let questions =
+JSON.parse(localStorage.getItem("quizQuestions")) || [];
+
+let list = document.getElementById("quizList");
+
+if(!list) return;
+
+list.innerHTML = "";
+
+questions.forEach((question)=>{
+
+let li = document.createElement("li");
+
+li.innerText = question;
+
+list.appendChild(li);
+
+});
+
+}
 
 window.onload = function(){
 
@@ -465,5 +512,23 @@ displayCourses();
 displayInternships();
 
 displayRoadmap();
+
+displayQuizQuestions();
+
+let name = localStorage.getItem("studentName");
+let interest = localStorage.getItem("studentInterest");
+let career = localStorage.getItem("careerRecommendation");
+
+if(document.getElementById("studentName")){
+document.getElementById("studentName").innerText = name;
+}
+
+if(document.getElementById("studentInterest")){
+document.getElementById("studentInterest").innerText = interest;
+}
+
+if(document.getElementById("careerResult")){
+document.getElementById("careerResult").innerText = career;
+}
 
 }
