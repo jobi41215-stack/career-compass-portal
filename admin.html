@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 <title>Admin Dashboard</title>
 <link rel="stylesheet" href="style.css">
@@ -7,13 +8,14 @@
 </head>
 
 <body>
-<div id="adminLogin">
+
+<div id="adminLogin" class="form-container">
 
 <h2>Admin Login</h2>
 
-<input type="text" id="adminUser" placeholder="Enter Admin Username"><br><br>
+<input type="text" id="adminUser" placeholder="Username">
 
-<input type="password" id="adminPass" placeholder="Enter Password"><br><br>
+<input type="password" id="adminPass" placeholder="Password">
 
 <button onclick="adminLogin()">Login</button>
 
@@ -24,59 +26,58 @@
 
 <h1>Admin Dashboard</h1>
 
-<h2>Add Course</h2>
-<input type="text" id="courseInput" placeholder="Enter course name">
+<div class="admin-card">
+
+<h2>📚 Add Course</h2>
+
+<input type="text" id="courseInput" placeholder="Course Name">
+
 <button onclick="addCourse()">Add Course</button>
+
 <ul id="courseList"></ul>
 
+</div>
 
-<h2>Add Internship</h2>
-<input type="text" id="internshipInput" placeholder="Enter internship">
+
+<div class="admin-card">
+
+<h2>💼 Add Internship</h2>
+
+<input type="text" id="internshipInput" placeholder="Internship Title">
+
 <button onclick="addInternship()">Add Internship</button>
+
 <ul id="internshipList"></ul>
 
+</div>
 
-<h2>Add Career Roadmap</h2>
-<input type="text" id="roadmapInput" placeholder="Enter roadmap step">
-<button onclick="addRoadmap()">Add Roadmap</button>
+
+<div class="admin-card">
+
+<h2>🛣️ Add Roadmap Step</h2>
+
+<input type="text" id="roadmapInput" placeholder="Roadmap Step">
+
+<button onclick="addRoadmap()">Add Step</button>
+
 <ul id="roadmapList"></ul>
 
 </div>
 
-<h1>Admin Dashboard</h1>
 
-<section>
+<div class="admin-card">
 
-<h2>Add Course</h2>
+<h2>❓ Add Quiz Question</h2>
 
-<input type="text" id="courseInput" placeholder="Enter course name">
-<button onclick="addCourse()">Add Course</button>
+<input type="text" id="quizInput" placeholder="Quiz Question">
 
-<ul id="courseList"></ul>
+<button onclick="addQuizQuestion()">Add Question</button>
 
-</section>
+<ul id="quizList"></ul>
 
-<section>
+</div>
 
-<h2>Add Internship</h2>
-
-<input type="text" id="internshipInput" placeholder="Enter internship title">
-<button onclick="addInternship()">Add Internship</button>
-
-<ul id="internshipList"></ul>
-
-</section>
-
-<section>
-
-<h2>Add Career Roadmap Step</h2>
-
-<input type="text" id="roadmapInput" placeholder="Enter roadmap step">
-<button onclick="addRoadmap()">Add Roadmap Step</button>
-
-<ul id="roadmapList"></ul>
-
-</section>
+</div>
 
 </body>
 </html>
