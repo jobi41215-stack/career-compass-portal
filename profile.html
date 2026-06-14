@@ -1,39 +1,39 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Student Profile</title>
-</head>
+<div class="page-container">
 
-<body>
+<h1 class="page-title">My Profile</h1>
 
-<h1>Create Your Profile</h1>
+<div class="card">
 
-<label>Name:</label><br>
-<input type="text" id="name"><br><br>
+<label>Name</label>
+<input type="text" id="name">
 
-<label>Email:</label><br>
-<input type="email" id="email"><br><br>
+<label>Email</label>
+<input type="email" id="email">
 
-<label>Interest:</label><br>
-<input type="text" id="interest"><br><br>
+<label>Career Interest</label>
+<input type="text" id="interest">
 
-<label>Upload Profile Photo:</label><br>
-<input type="file" id="photo"><br><br>
-
-<img id="displayPhoto" width="120">
+<label>Profile Photo</label>
+<input type="file" id="photo">
 
 <button onclick="saveProfile()">Save Profile</button>
 
+</div>
+
+<div class="card">
+
 <h2>Saved Profile</h2>
+
+<img id="displayPhoto" width="120">
 
 <p id="displayName"></p>
 <p id="displayEmail"></p>
 <p id="displayInterest"></p>
 
-<button onclick="showProfile()">View Saved Profile</button>
-  
-<script src="script.js"></script>
-  
-</body>
-</html>
+<button onclick="showProfile()">
+View Profile
+</button>
 
+</div>
+
+</div>
