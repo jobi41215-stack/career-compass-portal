@@ -172,5 +172,13 @@ background:#1e3a8a;
 color:white;
 text-align:center;
 padding:20px;
+width:100%;
+clear:both;
 }
+
+footer p{
+margin:5px 0;
+text-align:center;
+}
+
 
