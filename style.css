@@ -134,3 +134,60 @@ gap:10px;
 flex:1;
 margin:0;
 }
+.logo img{
+height:60px;
+width:auto;
+display:block;
+}
+
+.hero{
+background-image:url("hero.jpg.png");
+background-size:cover;
+background-position:center;
+background-repeat:no-repeat;
+
+height:100vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero-content{
+background:rgba(0,0,0,0.45);
+padding:40px;
+border-radius:20px;
+color:white;
+max-width:800px;
+}
+
+.hero-content h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero-content p{
+font-size:20px;
+margin-bottom:30px;
+line-height:1.6;
+}
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.hero-buttons button{
+font-size:18px;
+padding:15px 25px;
+}
+
+footer{
+background:#1e3a8a;
+color:white;
+text-align:center;
+padding:20px;
+}
