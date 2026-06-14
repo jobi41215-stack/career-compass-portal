@@ -16,6 +16,11 @@ padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:1000;
 }
 
 .navbar a{
@@ -135,7 +140,7 @@ flex:1;
 margin:0;
 }
 .logo img{
-height:70px;
+height:110px;
 width:auto;
 display:block;
 }
@@ -146,7 +151,7 @@ background-size:cover;
 background-position:center;
 background-repeat:no-repeat;
 
-height:110vh;
+height:calc(100vh - 80px);
 margin-top:80px;
 }
 
