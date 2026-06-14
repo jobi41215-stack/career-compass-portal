@@ -10,6 +10,7 @@ background:#f4f7fc;
 color:#333;
 }
 
+/* Navigation Bar */
 .navbar{
 background:#1e3a8a;
 padding:15px 40px;
@@ -34,6 +35,25 @@ font-weight:bold;
 color:#facc15;
 }
 
+/* Logo */
+.logo img{
+height:120px;
+width:auto;
+display:block;
+}
+
+/* Hero Image */
+.hero{
+background-image:url("hero.jpg.png");
+background-size:contain;
+background-position:center top;
+background-repeat:no-repeat;
+
+height:calc(100vh - 80px);
+margin-top:80px;
+}
+
+/* Page Layout */
 .page-container{
 max-width:1100px;
 margin:auto;
@@ -55,6 +75,7 @@ box-shadow:0 4px 15px rgba(0,0,0,0.1);
 margin-bottom:25px;
 }
 
+/* Forms */
 input,
 select,
 textarea{
@@ -80,6 +101,7 @@ button:hover{
 background:#1d4ed8;
 }
 
+/* Grid Cards */
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -98,6 +120,7 @@ transition:0.3s;
 transform:translateY(-5px);
 }
 
+/* Chatbot */
 .chat-container{
 max-width:900px;
 margin:auto;
@@ -139,22 +162,8 @@ gap:10px;
 flex:1;
 margin:0;
 }
-.logo img{
-height:70px;
-width:auto;
-display:block;
-}
 
-.hero{
-background-image:url("hero.jpg.png");
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-
-height:calc(100vh - 80px);
-margin-top:80px;
-}
-
+/* Footer */
 footer{
 background:#1e3a8a;
 color:white;
