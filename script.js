@@ -296,10 +296,14 @@ let savedPassword = localStorage.getItem("userPassword");
 
 if(email === savedEmail && password === savedPassword){
 
+localStorage.setItem(
+"loggedInUser",
+localStorage.getItem("userName")
+);
+
 alert("Login successful!");
 
 window.location.href = "dashboard.html";
-
 }
 
 else{
@@ -504,6 +508,18 @@ list.appendChild(li);
 });
 
 }
+function loadDashboard(){
+
+let user = localStorage.getItem("loggedInUser");
+
+if(document.getElementById("welcomeMessage")){
+
+document.getElementById("welcomeMessage").innerText =
+"Welcome, " + user + " 👋";
+
+}
+
+}
 
 window.onload = function(){
 
@@ -514,6 +530,7 @@ displayInternships();
 displayRoadmap();
 
 displayQuizQuestions();
+loadDashboard();
 
 let name = localStorage.getItem("studentName");
 let interest = localStorage.getItem("studentInterest");
