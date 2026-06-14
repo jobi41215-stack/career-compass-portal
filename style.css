@@ -154,10 +154,23 @@ background-repeat:no-repeat;
 height:110vh;
 margin-top:80px;
 }
+.auth-container{
+max-width:450px;
+margin:120px auto;
+padding:30px;
+background:white;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.auth-container h2{
+text-align:center;
+color:#1e3a
 
 footer{
 background:#1e3a8a;
 color:white;
 text-align:center;
 padding:20px;
-} is this the correct style.css code
+}
+
