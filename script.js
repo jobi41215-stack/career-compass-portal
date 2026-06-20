@@ -281,7 +281,7 @@ localStorage.setItem("userPassword", password);
 
 alert("Signup successful!");
 
-window.location.href = "login.html";
+window.location.href = "dashboard.html";
 
 }
 
