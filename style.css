@@ -188,6 +188,41 @@ width:100%;
 .form-container p{
 text-align:center;
 }
+.form-container{
+max-width:450px;
+margin:120px auto;
+padding:30px;
+background:white;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.form-container h2{
+text-align:center;
+margin-bottom:20px;
+color:#1e3a8a;
+}
+
+.admin-card{
+background:white;
+padding:25px;
+margin:20px;
+border-radius:15px;
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+#adminPanel{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+gap:20px;
+max-width:1200px;
+margin:50px auto;
+padding:20px;
+}
+
+#adminPanel h1{
+grid-column:1/-1;
+text-align:center;
+}
 footer{
 background:#1e3a8a;
 color:white;
