@@ -323,7 +323,9 @@ let career = localStorage.getItem("careerRecommendation");
 if(document.getElementById("studentName")){
 document.getElementById("studentName").innerText = name;
 }
-
+if(document.getElementById("profileName")){
+document.getElementById("profileName").innerText = name;
+}
 if(document.getElementById("studentInterest")){
 document.getElementById("studentInterest").innerText = interest;
 }
