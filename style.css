@@ -223,7 +223,6 @@ padding:20px;
 grid-column:1/-1;
 text-align:center;
 }
-/* Dashboard Layout */
 
 .container{
 display:flex;
@@ -261,6 +260,7 @@ background:#2563eb;
 }
 
 .main{
+margin-top:90px;
 margin-left:270px;
 padding:30px;
 width:100%;
