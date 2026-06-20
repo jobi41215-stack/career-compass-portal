@@ -316,6 +316,11 @@ alert("Invalid login details");
 
 window.onload = function(){
 
+displayCourses();
+displayInternships();
+displayRoadmap();
+displayQuizQuestions();
+
 let name = localStorage.getItem("studentName");
 let interest = localStorage.getItem("studentInterest");
 let career = localStorage.getItem("careerRecommendation");
@@ -323,9 +328,11 @@ let career = localStorage.getItem("careerRecommendation");
 if(document.getElementById("studentName")){
 document.getElementById("studentName").innerText = name;
 }
+
 if(document.getElementById("profileName")){
 document.getElementById("profileName").innerText = name;
 }
+
 if(document.getElementById("studentInterest")){
 document.getElementById("studentInterest").innerText = interest;
 }
@@ -523,31 +530,3 @@ document.getElementById("welcomeMessage").innerText =
 
 }
 
-window.onload = function(){
-
-displayCourses();
-
-displayInternships();
-
-displayRoadmap();
-
-displayQuizQuestions();
-loadDashboard();
-
-let name = localStorage.getItem("studentName");
-let interest = localStorage.getItem("studentInterest");
-let career = localStorage.getItem("careerRecommendation");
-
-if(document.getElementById("studentName")){
-document.getElementById("studentName").innerText = name;
-}
-
-if(document.getElementById("studentInterest")){
-document.getElementById("studentInterest").innerText = interest;
-}
-
-if(document.getElementById("careerResult")){
-document.getElementById("careerResult").innerText = career;
-}
-
-}
