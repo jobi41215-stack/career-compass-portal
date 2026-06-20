@@ -13,11 +13,21 @@
 
 <h2>Admin Login</h2>
 
-<input type="text" id="adminUser" placeholder="Username">
+<form onsubmit="adminLogin(); return false;">
 
-<input type="password" id="adminPass" placeholder="Password">
+<input type="text"
+id="adminUser"
+placeholder="Username"
+required>
 
-<button onclick="adminLogin()">Login</button>
+<input type="password"
+id="adminPass"
+placeholder="Password"
+required>
+
+<button type="submit">Login</button>
+
+</form>
 
 </div>
 
