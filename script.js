@@ -318,6 +318,29 @@ document.getElementById("userQuestion").value = "";
 chatbox.scrollTop = chatbox.scrollHeight;
 
 }
+function clearChat(){
+
+document.getElementById("chatbox").innerHTML = `
+
+<div class="bot-message">
+👋 Welcome to Career Compass AI Assistant.<br><br>
+
+Ask me about:
+<ul>
+<li>Software Developer</li>
+<li>Frontend Development</li>
+<li>Backend Development</li>
+<li>Python</li>
+<li>AI Engineering</li>
+<li>Data Analytics</li>
+<li>Resume Building</li>
+<li>Interview Preparation</li>
+</ul>
+</div>
+
+`;
+
+}
 function analyzeSkills(){
 
 let programming = document.getElementById("programming").value;
