@@ -208,20 +208,6 @@ width:100%;
 .form-container p{
 text-align:center;
 }
-.form-container{
-max-width:450px;
-margin:120px auto;
-padding:30px;
-background:white;
-border-radius:15px;
-box-shadow:0 4px 15px rgba(0,0,0,0.1);
-}
-
-.form-container h2{
-text-align:center;
-margin-bottom:20px;
-color:#1e3a8a;
-}
 
 .admin-card{
 background:white;
@@ -325,6 +311,52 @@ margin-bottom:8px;
 .feature-card h2{
 color:#1e3a8a;
 margin-bottom:10px;
+}
+.tab-buttons{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.tab-buttons button{
+flex:1;
+padding:12px;
+background:#1e3a8a;
+color:white;
+border:none;
+border-radius:8px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.tab-buttons button:hover{
+background:#2563eb;
+}
+
+.auth-container h1{
+text-align:center;
+color:#1e3a8a;
+margin-bottom:20px;
+}
+
+#signupForm,
+#loginForm{
+margin-top:20px;
+}
+function showSignup(){
+
+document.getElementById("signupForm").style.display = "block";
+
+document.getElementById("loginForm").style.display = "none";
+
+}
+
+function showLogin(){
+
+document.getElementById("signupForm").style.display = "none";
+
+document.getElementById("loginForm").style.display = "block";
+
 }
 footer{
 background:#1e3a8a;
