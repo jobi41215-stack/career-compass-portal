@@ -7,6 +7,12 @@
 
 <link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
+<script>
+if(!localStorage.getItem("loggedInUser")){
+    alert("Please sign in first!");
+    window.location.href = "auth.html";
+}
+</script>
 
 </head>
 
