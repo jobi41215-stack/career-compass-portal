@@ -42,8 +42,22 @@ else{
 result = "Suggested Career: Teacher";
 }
 
-document.getElementById("result").innerText = result;
+document.getElementById("result").innerHTML = `
 
+<h3>${result}</h3>
+
+<br>
+
+<p><strong>Recommended Skills:</strong></p>
+
+<ul>
+<li>HTML & CSS</li>
+<li>JavaScript</li>
+<li>Problem Solving</li>
+<li>Communication Skills</li>
+</ul>
+
+`;
 }
 
 
