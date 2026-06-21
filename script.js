@@ -650,4 +650,22 @@ document.getElementById("welcomeMessage").innerText =
 }
 
 }
+document.addEventListener("DOMContentLoaded", function(){
 
+let input = document.getElementById("userQuestion");
+
+if(input){
+
+input.addEventListener("keypress", function(event){
+
+if(event.key === "Enter"){
+
+careerChatbot();
+
+}
+
+});
+
+}
+
+});
