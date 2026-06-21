@@ -149,7 +149,7 @@ localStorage.setItem("careerRecommendation", career);
 
 }
 function careerChatbot(){
-
+let time = new Date().toLocaleTimeString();
 let question =
 document.getElementById("userQuestion")
 .value
@@ -293,11 +293,13 @@ response =
 chatbox.innerHTML +=
 "<div class='user-message'>" +
 question +
+"<br><small>" + time + "</small>" +
 "</div>";
 
 chatbox.innerHTML +=
 "<div class='bot-message'>" +
 response +
+"<br><small>" + time + "</small>" +
 "</div>";
 
 document.getElementById("userQuestion").value = "";
