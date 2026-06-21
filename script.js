@@ -445,9 +445,9 @@ localStorage.setItem("userName", name);
 localStorage.setItem("userEmail", email);
 localStorage.setItem("userPassword", password);
 
-alert("Signup successful!");
+alert("Signup successful! Please login.");
 
-window.location.href = "dashboard.html";
+showLogin();
 
 }
 
