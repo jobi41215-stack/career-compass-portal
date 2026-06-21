@@ -297,10 +297,21 @@ question +
 "</div>";
 
 chatbox.innerHTML +=
+"<div class='bot-message' id='typing'>🤖 Typing...</div>";
+
+setTimeout(() => {
+
+document.getElementById("typing").remove();
+
+chatbox.innerHTML +=
 "<div class='bot-message'>" +
 response +
 "<br><small>" + time + "</small>" +
 "</div>";
+
+chatbox.scrollTop = chatbox.scrollHeight;
+
+}, 1000);
 
 document.getElementById("userQuestion").value = "";
 
