@@ -795,30 +795,3 @@ result
 );
 
 }
-function checkLogin(page){
-
-let user = localStorage.getItem("loggedInUser");
-
-if(user){
-
-window.location.href = page;
-
-}
-else{
-
-alert("Please login first!");
-
-window.location.href = "auth.html";
-
-}
-
-}
-function logout(){
-
-localStorage.removeItem("loggedInUser");
-
-alert("Logged out successfully!");
-
-window.location.href = "index.html";
-
-}
