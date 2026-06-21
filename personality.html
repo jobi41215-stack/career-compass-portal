@@ -7,36 +7,103 @@
 </head>
 
 <body>
+<nav class="navbar">
 
-<h1>Personality Test</h1>
+<div class="logo">
+<img src="logo1.png" alt="Career Compass Logo">
+</div>
 
-<p>1️⃣ Do you enjoy solving logical problems?</p>
-<input type="radio" name="q1" value="tech"> Yes
-<input type="radio" name="q1" value="design"> No
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="profile.html">Profile</a>
+<a href="quiz.html">Career Quiz</a>
+<a href="roadmap.html">Roadmap</a>
+<a href="courses.html">Courses</a>
+<a href="internships.html">Internships</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="chatbot.html">🤖 AI Bot</a>
+</div>
+
+</nav>
+<div class="page-container">
+
+<h1 class="page-title">🧠 Personality Test</h1>
+
+<div class="card">
+
+<p><strong>1️⃣ Do you enjoy solving logical problems?</strong></p>
+
+<label>
+<input type="radio" name="q1" value="tech">
+Yes
+</label>
+
+<label>
+<input type="radio" name="q1" value="design">
+No
+</label>
 
 <br><br>
 
-<p>2️⃣ Do you like designing or drawing?</p>
-<input type="radio" name="q2" value="design"> Yes
-<input type="radio" name="q2" value="tech"> No
+<p><strong>2️⃣ Do you like designing or drawing?</strong></p>
+
+<label>
+<input type="radio" name="q2" value="design">
+Yes
+</label>
+
+<label>
+<input type="radio" name="q2" value="tech">
+No
+</label>
 
 <br><br>
 
-<p>3️⃣ Do you enjoy analyzing numbers or data?</p>
-<input type="radio" name="q3" value="data"> Yes
-<input type="radio" name="q3" value="design"> No
+<p><strong>3️⃣ Do you enjoy analyzing numbers or data?</strong></p>
+
+<label>
+<input type="radio" name="q3" value="data">
+Yes
+</label>
+
+<label>
+<input type="radio" name="q3" value="design">
+No
+</label>
 
 <br><br>
 
-<p>4️⃣ Do you like helping or teaching people?</p>
-<input type="radio" name="q4" value="teaching"> Yes
-<input type="radio" name="q4" value="tech"> No
+<p><strong>4️⃣ Do you like helping or teaching people?</strong></p>
+
+<label>
+<input type="radio" name="q4" value="teaching">
+Yes
+</label>
+
+<label>
+<input type="radio" name="q4" value="tech">
+No
+</label>
 
 <br><br>
 
-<button onclick="careerMatch()">See Career Match</button>
+<button onclick="careerMatch()">
+See Career Match
+</button>
 
-<h2 id="result"></h2>
+</div>
+
+<div class="card">
+
+<h2>🎯 Result</h2>
+
+<div id="result">
+Your personality-based career recommendation will appear here.
+</div>
+
+</div>
+
+</div>
 
 </body>
 </html>
