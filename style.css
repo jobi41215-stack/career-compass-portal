@@ -343,21 +343,7 @@ margin-bottom:20px;
 #loginForm{
 margin-top:20px;
 }
-function showSignup(){
 
-document.getElementById("signupForm").style.display = "block";
-
-document.getElementById("loginForm").style.display = "none";
-
-}
-
-function showLogin(){
-
-document.getElementById("signupForm").style.display = "none";
-
-document.getElementById("loginForm").style.display = "block";
-
-}
 footer{
 background:#1e3a8a;
 color:white;
