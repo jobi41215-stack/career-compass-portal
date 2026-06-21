@@ -719,3 +719,79 @@ function clearChat(){
 document.getElementById("chatbox").innerHTML = "";
 
 }
+function careerMatch(){
+
+let tech = 0;
+let design = 0;
+let data = 0;
+let teaching = 0;
+
+
+let answers = document.querySelectorAll(
+"input[type=radio]:checked"
+);
+
+
+answers.forEach((answer)=>{
+
+if(answer.value === "tech"){
+tech++;
+}
+
+if(answer.value === "design"){
+design++;
+}
+
+if(answer.value === "data"){
+data++;
+}
+
+if(answer.value === "teaching"){
+teaching++;
+}
+
+});
+
+
+let result="";
+
+
+if(tech >= design && tech >= data && tech >= teaching){
+
+result =
+"👨‍💻 Best Match: Software Developer";
+
+}
+
+else if(design >= tech && design >= data && design >= teaching){
+
+result =
+"🎨 Best Match: UI/UX Designer";
+
+}
+
+else if(data >= tech && data >= design && data >= teaching){
+
+result =
+"📊 Best Match: Data Analyst";
+
+}
+
+else{
+
+result =
+"👩‍🏫 Best Match: Teacher";
+
+}
+
+
+
+document.getElementById("result").innerHTML = result;
+
+
+localStorage.setItem(
+"careerRecommendation",
+result
+);
+
+}
