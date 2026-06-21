@@ -397,49 +397,17 @@ result = "Recommended Career: Teacher or Counselor";
 document.getElementById("personalityResult").innerText = result;
 
 }
-function careerMatch(){
-
-let tech = 0;
-let design = 0;
-let data = 0;
-let teaching = 0;
-
-let answers = document.querySelectorAll("input[type=radio]:checked");
-
-answers.forEach((answer) => {
-
-if(answer.value === "tech"){
-tech++;
-}
-
-if(answer.value === "design"){
-design++;
-}
-
-if(answer.value === "data"){
-data++;
-}
-
-if(answer.value === "teaching"){
-teaching++;
-}
-
-});
-
-let total = answers.length;
-
-let techScore = Math.round((tech/total)*100);
-let designScore = Math.round((design/total)*100);
-let dataScore = Math.round((data/total)*100);
-let teachingScore = Math.round((teaching/total)*100);
-
 document.getElementById("result").innerHTML =
-"💻 Software Developer Match: " + techScore + "% <br><br>" +
-"🎨 UI/UX Designer Match: " + designScore + "% <br><br>" +
-"📊 Data Analyst Match: " + dataScore + "% <br><br>" +
-"👨‍🏫 Teacher Match: " + teachingScore + "%";
 
-}
+"<h2>🎯 Career Match Analysis</h2>" +
+
+"<p>💻 Software Developer: " + techScore + "%</p>" +
+
+"<p>🎨 UI/UX Designer: " + designScore + "%</p>" +
+
+"<p>📊 Data Analyst: " + dataScore + "%</p>" +
+
+"<p>👨‍🏫 Teacher: " + teachingScore + "%</p>";
 function signup(){
 
 let name = document.getElementById("signupName").value;
