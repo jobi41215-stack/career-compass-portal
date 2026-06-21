@@ -671,3 +671,8 @@ careerChatbot();
 }
 
 });
+function clearChat(){
+
+document.getElementById("chatbox").innerHTML = "";
+
+}
