@@ -1,33 +1,88 @@
 <!DOCTYPE html>
+
 <html>
+
 <head>
-<title>Career Quiz</title>
+<title>Career Assessment Quiz</title>
+
+<link rel="stylesheet" href="style.css">
 <script src="script.js"></script>
+
 </head>
 
 <body>
 
-<h1>Career Assessment Quiz</h1>
+<div class="page-container">
+
+<h1 class="page-title">📝 Career Assessment Quiz</h1>
+
+<div class="card">
 
 <form id="quizForm">
 
-<p>1. Do you enjoy solving logical problems?</p>
-<input type="radio" name="q1" value="tech"> Yes<br>
-<input type="radio" name="q1" value="nontech"> No<br>
+<p><strong>1. Do you enjoy solving logical problems?</strong></p>
 
-<p>2. Do you like designing or drawing?</p>
-<input type="radio" name="q2" value="design"> Yes<br>
-<input type="radio" name="q2" value="tech"> No<br>
-
-<p>3. Do you enjoy working with data and numbers?</p>
-<input type="radio" name="q3" value="data"> Yes<br>
-<input type="radio" name="q3" value="nontech"> No<br>
-
-<p>4. Do you enjoy teaching or helping others learn?</p>
-<input type="radio" name="q4" value="teaching"> Yes<br>
-<input type="radio" name="q4" value="tech"> No<br>
+<label>
+<input type="radio" name="q1" value="tech">
+Yes
+</label>
 
 <br>
+
+<label>
+<input type="radio" name="q1" value="nontech">
+No
+</label>
+
+<br><br>
+
+<p><strong>2. Do you like designing or drawing?</strong></p>
+
+<label>
+<input type="radio" name="q2" value="design">
+Yes
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q2" value="tech">
+No
+</label>
+
+<br><br>
+
+<p><strong>3. Do you enjoy working with data and numbers?</strong></p>
+
+<label>
+<input type="radio" name="q3" value="data">
+Yes
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q3" value="nontech">
+No
+</label>
+
+<br><br>
+
+<p><strong>4. Do you enjoy teaching or helping others learn?</strong></p>
+
+<label>
+<input type="radio" name="q4" value="teaching">
+Yes
+</label>
+
+<br>
+
+<label>
+<input type="radio" name="q4" value="tech">
+No
+</label>
+
+<br><br>
 
 <button type="button" onclick="personalizedRecommendation()">
 Submit Quiz
@@ -35,12 +90,24 @@ Submit Quiz
 
 </form>
 
+</div>
 
 <div class="card">
 
 <h2>🎯 Career Recommendation</h2>
 
-<div id="result"></div>
+<div id="result">
+
+<p>
+Complete the quiz and click
+<strong>Submit Quiz</strong>
+to receive your career recommendation.
+</p>
+
+</div>
+
+<br>
+
 <button onclick="calculateResult()">
 Get Recommendation
 </button>
@@ -48,6 +115,11 @@ Get Recommendation
 <button onclick="careerMatch()">
 View Match Percentage
 </button>
+
 </div>
+
+</div>
+
 </body>
+
 </html>
