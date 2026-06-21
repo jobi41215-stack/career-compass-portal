@@ -808,8 +808,17 @@ else{
 
 alert("Please login first!");
 
-window.location.href = "login.html";
+window.location.href = "auth.html";
 
 }
+
+}
+function logout(){
+
+localStorage.removeItem("loggedInUser");
+
+alert("Logged out successfully!");
+
+window.location.href = "index.html";
 
 }
