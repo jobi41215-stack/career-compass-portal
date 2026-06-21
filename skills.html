@@ -7,21 +7,55 @@
 </head>
 
 <body>
+<nav class="navbar">
 
-<h1>Skill Analyzer</h1>
+<div class="logo">
+<img src="logo1.png" alt="Career Compass Logo">
+</div>
+
+<div class="nav-links">
+<a href="index.html">Home</a>
+<a href="profile.html">Profile</a>
+<a href="quiz.html">Career Quiz</a>
+<a href="roadmap.html">Roadmap</a>
+<a href="courses.html">Courses</a>
+<a href="internships.html">Internships</a>
+<a href="dashboard.html">Dashboard</a>
+<a href="chatbot.html">🤖 AI Bot</a>
+</div>
+
+</nav>
+<div class="page-container">
+
+<h1 class="page-title">📊 Skill Analyzer</h1>
+
+<div class="card">
 
 <label>Programming Skill (0-10)</label>
-<input type="number" id="programming"><br><br>
+<input type="number" id="programming" min="0" max="10">
 
 <label>Creativity (0-10)</label>
-<input type="number" id="creativity"><br><br>
+<input type="number" id="creativity" min="0" max="10">
 
 <label>Communication (0-10)</label>
-<input type="number" id="communication"><br><br>
+<input type="number" id="communication" min="0" max="10">
 
-<button onclick="analyzeSkills()">Analyze</button>
+<button onclick="analyzeSkills()">
+Analyze My Skills
+</button>
 
-<p id="skillResult"></p>
+</div>
 
+<div class="card">
+
+<h2>Result</h2>
+
+<p id="skillResult">
+Your career recommendation will appear here.
+</p>
+
+</div>
+
+</div>
 </body>
 </html>
