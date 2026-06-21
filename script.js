@@ -150,36 +150,157 @@ localStorage.setItem("careerRecommendation", career);
 }
 function careerChatbot(){
 
-let question = document.getElementById("userQuestion").value.toLowerCase();
-let chatbox = document.getElementById("chatbox");
+let question =
+document.getElementById("userQuestion")
+.value
+.toLowerCase();
+
+let chatbox =
+document.getElementById("chatbox");
 
 let response = "";
 
 if(question.includes("software")){
-response = "To become a Software Developer, learn programming like JavaScript, Python, and build projects.";
+
+response =
+"💻 Software Developer Roadmap:<br><br>" +
+"1. Learn C/Python<br>" +
+"2. Learn HTML, CSS, JavaScript<br>" +
+"3. Build Projects<br>" +
+"4. Complete Internship<br>" +
+"5. Apply for Jobs";
+
+}
+
+else if(question.includes("frontend")){
+
+response =
+"🌐 Frontend Developer Skills:<br><br>" +
+"• HTML<br>" +
+"• CSS<br>" +
+"• JavaScript<br>" +
+"• React JS<br>" +
+"• Responsive Design";
+
+}
+
+else if(question.includes("backend")){
+
+response =
+"⚙ Backend Developer Skills:<br><br>" +
+"• Node.js<br>" +
+"• Express.js<br>" +
+"• SQL / MongoDB<br>" +
+"• APIs<br>" +
+"• Authentication";
+
+}
+
+else if(question.includes("python")){
+
+response =
+"🐍 Python Career Paths:<br><br>" +
+"• Software Development<br>" +
+"• Data Science<br>" +
+"• AI / Machine Learning<br>" +
+"• Automation";
+
+}
+
+else if(question.includes("java")){
+
+response =
+"☕ Java Career Paths:<br><br>" +
+"• Backend Development<br>" +
+"• Android App Development<br>" +
+"• Enterprise Software";
+
 }
 
 else if(question.includes("data")){
-response = "For Data Analyst careers, learn Excel, SQL, Python, and statistics.";
+
+response =
+"📊 Data Analyst Skills:<br><br>" +
+"• Excel<br>" +
+"• SQL<br>" +
+"• Power BI<br>" +
+"• Statistics<br>" +
+"• Python";
+
 }
 
-else if(question.includes("design")){
-response = "For UI/UX Design, learn tools like Figma and Adobe XD.";
+else if(question.includes("ai")){
+
+response =
+"🤖 AI Engineer Roadmap:<br><br>" +
+"• Python<br>" +
+"• Machine Learning<br>" +
+"• Deep Learning<br>" +
+"• Generative AI<br>" +
+"• Projects";
+
 }
 
-else if(question.includes("teacher")){
-response = "Teachers usually need a degree in education and strong communication skills.";
+else if(question.includes("cyber")){
+
+response =
+"🔒 Cyber Security Skills:<br><br>" +
+"• Networking<br>" +
+"• Linux<br>" +
+"• Ethical Hacking<br>" +
+"• Security Tools";
+
+}
+
+else if(question.includes("resume")){
+
+response =
+"📄 Resume Tips:<br><br>" +
+"• Keep it 1 page<br>" +
+"• Mention Projects<br>" +
+"• Add Skills<br>" +
+"• Add Certifications";
+
+}
+
+else if(question.includes("interview")){
+
+response =
+"🎤 Interview Tips:<br><br>" +
+"• Practice Basics<br>" +
+"• Explain Projects Clearly<br>" +
+"• Prepare HR Questions";
+
 }
 
 else{
-response = "You can explore careers like Software Developer, Data Analyst, UI Designer, or Teacher.";
+
+response =
+"🤖 I can help with:<br><br>" +
+"• Software Developer<br>" +
+"• Frontend Developer<br>" +
+"• Backend Developer<br>" +
+"• Python<br>" +
+"• Java<br>" +
+"• AI Engineer<br>" +
+"• Data Analyst<br>" +
+"• Cyber Security<br>" +
+"• Resume Building<br>" +
+"• Interview Preparation";
+
 }
 
-chatbox.innerHTML += "<div class='user-message'>" + question + "</div>";
+chatbox.innerHTML +=
+"<div class='user-message'>" +
+question +
+"</div>";
 
-chatbox.innerHTML += "<div class='bot-message'>" + response + "</div>";
+chatbox.innerHTML +=
+"<div class='bot-message'>" +
+response +
+"</div>";
 
-document.getElementById("userQuestion").value="";
+document.getElementById("userQuestion").value = "";
 
 chatbox.scrollTop = chatbox.scrollHeight;
 
